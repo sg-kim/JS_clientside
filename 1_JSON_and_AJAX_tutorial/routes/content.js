@@ -11,7 +11,7 @@ module.exports = function(){
 
 	route.get('/info', function(req, res){
 	
-		var sql = 'SELECT * from study';
+		var sql = 'SELECT * from ajax_tutorial';
 
 		conn.query(sql, function(err, rows, field){
 			if(err){

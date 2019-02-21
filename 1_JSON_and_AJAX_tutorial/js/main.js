@@ -3,23 +3,24 @@ var btn = document.getElementById("btn");
 
 function renderHTML(data)
 {
-	var htmlString = "";
+	var htmlString = '';
 
 	for(i = 0; i < data.length; i++){
-		htmlString = htmlString + data['name'] + ', ' + data['hobby'] + ', ' + data['hometown'];
+		htmlString = htmlString + data['name'] + ', ' + data['home'] + ', ' + data['hobby'];
 	}
 
 	container.insertAdjacentHTML('beforeend', htmlString);
 }
 
 btn.addEventListener("click", function(){
-	var ourRequest = new XMLHttpRequest();
-	ourRequest.open('GET', '/info');
-	ourRequest.onload = function(){
-		var ourData = JSON.parse(ourRequest.resposeText);
-		console.log(ourData);
-		//renderHTML(ourData);
-	};
-	ourRequest.send();		//	send request to the server
+	//var ourRequest = new XMLHttpRequest();
+	//ourRequest.open('GET', '/info');
+	//ourRequest.onload = function(){
+	//	var ourData = JSON.parse(ourRequest.resposeText);
+	//	console.log(ourData);
+	//	//renderHTML(ourData);
+	//};
+	//ourRequest.send();		//	send request to the server
+	console.log('ourRequest.send()');
 });
 
