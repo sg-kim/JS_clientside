@@ -17,8 +17,9 @@ btn.addEventListener("click", function(){
 	ourRequest.open('GET', '/info');
 	ourRequest.onload = function(){
 		var ourData = JSON.parse(ourRequest.resposeText);
-		renderHTML(ourData);
+		console.log(ourData);
+		//renderHTML(ourData);
 	};
-	ourRequest.send();
+	ourRequest.send();		//	send request to the server
 });
 
