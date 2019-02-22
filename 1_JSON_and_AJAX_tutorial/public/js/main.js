@@ -14,6 +14,12 @@ function renderHTML(data)
 }
 
 btn.addEventListener("click", function(){
+
+	var table = 'ajax_tutorial';
+	var data = JSON.stringify({'table': table});
+
+	console.log(data);
+
 	var ourRequest = new XMLHttpRequest();
 	//ourRequest.open('GET', '/info');
 	ourRequest.open('POST', '/info');
@@ -22,6 +28,7 @@ btn.addEventListener("click", function(){
 		//console.log(ourData);
 		renderHTML(ourData);
 	};
-	ourRequest.send('table=study');		//	send request to the server
+	ourRequest.setRequestHeader('Content-type', 'application/json');
+	ourRequest.send(data);		//	send request to the server
 });
 

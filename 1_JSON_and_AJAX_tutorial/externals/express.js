@@ -11,6 +11,7 @@ module.exports = function(){
 	app.set('views', './view_files');
 	app.locals.pretty = true;
 
+	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({extended:false}));
 
 	return app;

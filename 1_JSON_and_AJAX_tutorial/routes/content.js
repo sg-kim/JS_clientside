@@ -12,9 +12,9 @@ module.exports = function(){
 	//route.get('/info', function(req, res){
 	route.post('/info', function(req, res){
 
-		console.log(req.body);
+		var table = req.body.table;
 
-		var sql = 'SELECT * from ajax_tutorial';
+		var sql = 'SELECT * from ' + table;
 
 		conn.query(sql, function(err, rows, field){
 			if(err){
