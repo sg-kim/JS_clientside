@@ -9,8 +9,11 @@ module.exports = function(){
 		res.render('content.pug', {});
 	});
 
-	route.get('/info', function(req, res){
-	
+	//route.get('/info', function(req, res){
+	route.post('/info', function(req, res){
+
+		console.log(req.body);
+
 		var sql = 'SELECT * from ajax_tutorial';
 
 		conn.query(sql, function(err, rows, field){
