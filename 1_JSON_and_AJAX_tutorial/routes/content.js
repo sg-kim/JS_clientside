@@ -14,6 +14,8 @@ module.exports = function(){
 
 		var table = req.body.table;
 
+		console.log('content.js: ', table);
+
 		var sql = 'SELECT * from ' + table;
 
 		conn.query(sql, function(err, rows, field){

@@ -6,7 +6,8 @@ function renderHTML(data)
 	var htmlString = '';
 
 	for(i = 0; i < data.length; i++){
-		htmlString = htmlString + data[i].name + ', ' + data[i].home + ', ' + data[i].hobby;
+		//htmlString = htmlString + data[i].name + ', ' + data[i].home + ', ' + data[i].hobby;
+		htmlString = htmlString + data[i]['name'] + ', ' + data[i]['home'];
 		htmlString = htmlString + '</br>';
 	}
 
